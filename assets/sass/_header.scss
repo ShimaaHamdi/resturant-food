@@ -1,0 +1,69 @@
+header {
+    background: url('../images/banner.jpg') no-repeat;
+     background-size: cover;
+    height: 100vh;
+    object-fit: cover;
+    color: $white-color;
+    position: relative;
+
+    .container {
+        top: 40%;
+        left: 30%;
+        transform: translate(-50%, 30%);
+        position: absolute;
+        color: $dark-color;
+        padding: 0.3rem 1rem;
+        width: 50%;
+
+        h2,
+        p,
+        .btn {
+            margin-bottom: 1rem;
+           font-weight: 700;
+        }
+
+        h2 {
+            font-weight: bolder;
+            font-size: 2.2rem;
+        }
+        .btn{
+            background-color: $dark-color;
+            color: $primary-color-varient;
+            border: none;
+            &:hover{
+                background-color: $primary-color-varient;
+                color: $dark-color;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    header{ 
+        background-position: center;
+        .container{
+            width: 100%;
+            text-align: center;
+            top: 21%;
+            left: 50%;
+            color: white;
+        }
+    }
+}
+@media screen and (max-width: 450px) {
+    header{ 
+        .container{
+            width: 100%;
+            text-align: center;
+            top: 40%;
+            left: 50%;
+            color: white;
+            h2{
+                font-size: 1.6rem;
+            }
+            p{
+                font-size: 0.8rem;
+            }
+        }
+    }
+}

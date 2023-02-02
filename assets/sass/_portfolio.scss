@@ -1,0 +1,77 @@
+.delightful {
+    .container {
+
+        .portfolio {
+            padding-top: 3rem;
+            position: relative;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem 0rem;
+
+            .box {
+                position: relative;
+
+                img {
+                    width: 100%;
+                }
+
+                .desc {
+                    position: absolute;
+                    top: -8px;
+                    left: -7px;
+                    flex-direction: column;
+                    justify-content: center;
+                    background: #0009;
+                    padding: 2rem;
+                    color: #ffffff;
+                    margin: 1rem;
+                    opacity: 0;
+                    visibility: hidden;
+                    right: 0;
+                    width: 90%;
+                    height: 90%;
+                    text-align: center;
+                    line-height: 2.1rem;
+                    font-weight: 300;
+                    display: flex;
+
+                    &.active {
+                        opacity: 1;
+                        visibility: visible;
+                    }
+
+                    .btn {
+                        width: 100%;
+                        background-color: $primary-color-varient;
+                        color: $white-color;
+                        padding: 0;
+                    }
+                }
+
+
+
+
+                &:hover {
+                    cursor: pointer;
+
+                    .desc {
+                        opacity: 1;
+                        visibility: visible;
+                        transform: scale(0.9);
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and(max-width:600px) {
+
+    .delightful {
+        .container {
+            .portfolio {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    }
+}

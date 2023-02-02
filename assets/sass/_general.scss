@@ -1,0 +1,61 @@
+html {
+    scroll-behavior: smooth;
+}
+
+ ::-webkit-scrollbar-thumb {
+    background-color: $dark-primary-color;
+}
+
+::-webkit-scrollbar {
+    width:0.5rem;
+}
+
+
+::selection {
+    background-color: $dark-primary-color;
+    color: $white-color;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+.container {
+    width: $container-lg;
+    margin: 0 auto;
+}
+
+section {
+    padding: 4rem 0;
+
+    .head {
+        text-align: center;
+
+        &>h4 {
+            font-size: 0.6rem;
+        }
+
+        &>h2 {
+            font-size: 2rem;
+        }
+    }
+}
+
+.btn {
+    @include button;
+}
+
+// Media Query (Meduim Devices )
+
+@media screen and (max-width: 1024px) {
+    .section {
+        .head {
+            width: $container-md;
+        }
+    }
+}
+
+// Media Query (Small Devices )
+
+@media screen and (max-width: 600px) {}

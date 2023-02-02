@@ -1,0 +1,18 @@
+@mixin button{
+    padding: 0.4rem 1.8rem;
+    border: 1px solid $primary-color-varient;
+    background: $dark-primary-color;
+    color: $dark-color;
+    border-radius: 0.3rem; 
+    display: inline-block;
+    &:hover{
+        background-color: $dark-color;
+        color: $dark-primary-color;
+    }
+
+}
+
+@mixin gradientColor{
+    background: linear-gradient($dark-color, $dark-primary-color);
+    color: $white-color;
+}

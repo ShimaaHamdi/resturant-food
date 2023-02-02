@@ -1,0 +1,122 @@
+.delicious {
+    background-image: linear-gradient(to top, rgb(5 5 5), rgb(14 19 23 / 64%)), url(../images/deleciousBG.jpeg);
+    background-size: cover;
+
+    .head {
+        color: $dark-primary-color;
+    }
+
+    .container {
+        text-align: center;
+
+        .menu {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            margin: 3rem 0;
+
+            .image {
+                img {
+                    width: 100%;
+                }
+            }
+
+            &:nth-child(2) {
+                justify-content: flex-end;
+
+                .drink_menu {
+                    right: unset;
+                    left: 25rem;
+                }
+            }
+
+            .drink_menu {
+                background-color: $white-color;
+                position: absolute;
+                right: 25rem;
+                padding: 1.5rem 4rem;
+                line-height: 2.1;
+                text-align: start;
+
+                h3 {
+                    color: $dark-primary-color;
+                }
+
+                ul {
+                    li {
+                        border-bottom: 0.1px solid $gray-color;
+                        padding: 0.2rem 0;
+                        font-size: 0.9rem;
+
+                        span {
+                            padding-right: 3rem;
+                        }
+                    }
+                }
+            }
+
+
+        }
+    }
+}
+
+@media screen and (max-width:1024px) {
+    .delicious {
+        .container {
+            width: $container-md;
+            .menu {
+                justify-content: center;
+
+                &:nth-child(2) {
+                    justify-content: center;
+                    .drink_menu{
+                        left: 10rem;
+                    }
+                }
+
+                .image {
+                    img {
+
+                        width: 80%; 
+
+                    }
+                }
+
+                .drink_menu {
+                    right: 10rem;
+                    padding: 1rem 2rem;
+                    line-height: 1.3;
+                    text-align: start;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .delicious {
+        .container {
+            width: $container-md;
+            .menu {
+               
+                &:nth-child(2) {
+                    .drink_menu{
+                       
+                    }
+                }
+                .image {
+                    img {
+                       width: 100%;
+                    }
+                }
+                .drink_menu {
+                    left: unset;
+                    right: unset;
+                    &.drink_menu{
+                        left: unset;
+                    }
+                }
+            }
+        }
+    }
+}

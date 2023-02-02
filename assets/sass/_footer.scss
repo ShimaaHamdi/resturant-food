@@ -1,0 +1,106 @@
+footer {
+    padding-top: 3rem;
+    background-image:
+        linear-gradient(to top, rgb(5 5 5), rgb(14 19 23 / 64%)), url(../images/footerbg.jpg);
+    background-size: cover;
+    color: $white-color;
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+
+        .box {
+
+            h2 {
+                font-size: 1rem;
+                margin-bottom: 2rem;
+                text-align: center;
+
+            }
+
+            .det {
+                margin-bottom: 2.5rem;
+
+                p {
+                    margin-bottom: 1rem;
+
+                    b {
+                        padding-right: 0.5rem;
+
+                        i {
+                            color: $dark-primary-color;
+                        }
+                    }
+                }
+            }
+
+            .social {
+
+                a {
+                    margin-right: 1rem;
+                    color: $dark-primary-color;
+
+                    &:hover {
+                        background-color: $dark-primary-color;
+                        padding: 0.5rem;
+                        border-radius: 50%;
+
+                        i {
+                            color: $dark-color;
+
+                        }
+                    }
+
+                }
+            }
+
+            form {
+
+                input,
+                textarea {
+                    background: #0e131752;
+                    padding: 0.5rem 0rem 0.5rem 2rem;
+                }
+
+                input {
+                    display: block;
+                    width: 100%;
+                    border-bottom: 1px solid #888;
+
+                }
+
+            }
+        }
+
+       
+    }
+    small{
+        text-align: center;
+        margin: 0 auto;
+        display: block;
+        background-color: $dark-color;
+        padding: 0.7rem 0;
+        text-transform: uppercase;
+        a{
+            color: $dark-primary-color;
+            text-transform: uppercase;
+        }
+    }
+}
+
+@media screen and(max-width:767px) {
+    footer{
+        .container {
+             flex-direction: column;
+            justify-content: center;
+            .box{
+                h2{
+                    text-align: start;
+                }
+                form{
+                    margin-top: 2rem;
+                }
+            }
+        }
+    }
+}

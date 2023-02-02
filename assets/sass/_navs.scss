@@ -1,0 +1,121 @@
+nav {
+    /* nav styles on scroll using js */
+    &.window-scroll{
+        background-color: $white-color;
+        color: $dark-color;
+    }
+    width: 100vw;
+    position: fixed;
+    height: 5rem;
+    z-index: 999;
+    display: grid;
+    place-items: center;
+    box-shadow: 0 0.3rem 0.3rem rgba($primary-color, 0.1);
+    background-color: $dark-color;
+    color: $white-color;
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .nav__logo {
+            h3 {
+
+                i,
+                span {
+                    color: $primary-color-varient;
+                    font-size: 1.5rem;
+                }
+            }
+        }
+
+        ul {
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+
+            li {
+                a {
+                    font-weight: 500;
+                    font-size: 0.9rem;
+
+                    &:hover {
+                        color: $primary-color-varient;
+                    }
+
+                }
+
+                &:last-child {
+                    &:hover {
+                        a {
+                            color: $white-color;
+                        }
+                    }
+
+                }
+            }
+        }
+
+        button {
+            cursor: pointer;
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    nav {
+        .container {
+            button {
+                display: inline-block;
+                background: transparent; 
+                font-size: 2rem;
+
+                &#closeNav-menu {
+                    display: none;
+                }
+            }
+
+            ul {
+                background-color: $dark-color;
+                display: none;
+                position: fixed;
+                text-align: center;
+                right: 5%;
+                top: 5rem;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0;
+                
+
+                li {
+                    width: 100%;
+                    opacity: 0;
+                    animation: flipNavItem 300ms ease forwards;
+                    transform-origin: top;
+                    perspective: 600px;
+                    opacity: 0;
+                    @keyframes flipNavItem {
+                        0% {
+                            transform: rotateX(90deg);
+
+                        }
+
+                        100% {
+                            transform: rotateX(0deg);
+                            opacity: 1;
+                        }
+                    }
+
+                    a {
+                        height: 100%;
+                        display: block;
+                        padding: 1.5rem 2rem;
+                        border-radius: 0;
+                    }
+                }
+            }
+        }
+    }
+}

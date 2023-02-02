@@ -1,0 +1,88 @@
+.special {
+    background-image:
+        linear-gradient(to top, rgb(5 5 5), rgb(14 19 23 / 64%)), url(../images/special.webp);
+    background-size: cover;
+
+    .container {
+        display: flex;
+        align-items: center;
+        width: $container-lg;
+        justify-content: center;
+
+        .content {
+            width: 50%;
+            background-color: $white-color;
+            padding: 2rem 5rem;
+            display: inline-block;
+            height: 100%;
+
+            &>h2,
+            &>p,
+            small {
+                margin-bottom: 1rem;
+            }
+
+            &>p {
+                color: $dark-primary-color;
+                font-weight: 600;
+            }
+
+            small {
+                display: inline-block;
+            }
+        }
+
+        .image {
+            img {
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:1024px) {
+    .special {
+        .container {
+            width: $container-md;
+            flex-direction: column-reverse;
+            position: relative;
+
+            .content {
+                padding: 1rem 2rem;
+                width: 20rem;
+                height: auto;
+                left: 18rem;
+                top: 3rem;
+                position: absolute; 
+}
+
+            .image {
+                img {
+                    width: 100%;
+
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:600px) {
+    .special {
+        .container {
+            .content {
+                padding: 1rem 2rem;
+                width: 18rem;
+                height: auto;
+                left: -1rem;
+                top: 5rem;
+            }
+
+            .image {
+                img {
+                    width:100%;
+
+                }
+            }
+        }
+    }
+}
